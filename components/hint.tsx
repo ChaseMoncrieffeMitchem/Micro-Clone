@@ -5,7 +5,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-export interface HintProps {
+interface HintProps {
   label: string;
   children: React.ReactNode;
   side?: "top" | "bottom" | "left" | "right";
@@ -14,7 +14,7 @@ export interface HintProps {
   alignOffset?: number;
 }
 
-const Hint = ({
+export const Hint = ({
   label,
   children,
   side,
@@ -39,5 +39,3 @@ const Hint = ({
     </TooltipProvider>
   );
 };
-
-export default Hint;

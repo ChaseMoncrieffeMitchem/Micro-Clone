@@ -25,7 +25,7 @@ interface ActionProps {
   title: string;
 }
 
-const Actions = ({ children, side, sideOffset, id, title }: ActionProps) => {
+export const Actions = ({ children, side, sideOffset, id, title }: ActionProps) => {
   const { onOpen } = useRenameModal()
   const { mutate, pending } = useApiMutation(api.board.remove);
 
@@ -74,5 +74,3 @@ const Actions = ({ children, side, sideOffset, id, title }: ActionProps) => {
     </DropdownMenu>
   );
 };
-
-export default Actions;
