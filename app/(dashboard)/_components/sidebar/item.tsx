@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useOrganization, useOrganizationList } from "@clerk/nextjs";
 
 import { cn } from "@/lib/utils";
-import Hint from "../../../../components/hint";
+import { Hint } from "@/components/hint";
 
 interface ItemProps {
   id: string;
@@ -12,7 +12,7 @@ interface ItemProps {
   imageUrl: string;
 }
 
-const Item = ({ id, name, imageUrl }: ItemProps) => {
+export const Item = ({ id, name, imageUrl }: ItemProps) => {
   const { organization } = useOrganization();
   const { setActive } = useOrganizationList();
 
@@ -40,5 +40,3 @@ const Item = ({ id, name, imageUrl }: ItemProps) => {
     </div>
   );
 };
-
-export default Item;

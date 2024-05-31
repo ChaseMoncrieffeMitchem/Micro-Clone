@@ -4,9 +4,9 @@ import { Plus } from "lucide-react";
 import { CreateOrganization } from "@clerk/nextjs";
 
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import Hint from "../../../../components/hint";
+import { Hint } from "@/components/hint";
 
-const NewButton = () => {
+export const NewButton = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -28,4 +28,3 @@ const NewButton = () => {
   );
 };
 
-export default NewButton;

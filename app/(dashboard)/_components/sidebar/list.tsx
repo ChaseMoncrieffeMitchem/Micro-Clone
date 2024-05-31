@@ -1,9 +1,9 @@
 "use client"
 
 import { useOrganizationList } from "@clerk/nextjs"
-import Item from "./item"
+import { Item } from "./item"
 
-const List = () => {
+export const List = () => {
     const { userMemberships } = useOrganizationList({
         userMemberships: {
             infinite: true
@@ -25,4 +25,3 @@ const List = () => {
   )
 }
 
-export default List

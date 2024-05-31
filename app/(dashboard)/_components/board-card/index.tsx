@@ -10,7 +10,7 @@ import { useAuth } from "@clerk/nextjs";
 import Footer from "./footer";
 
 import { Skeleton } from "@/components/ui/skeleton";
-import Actions from "@/components/actions";
+import { Actions } from "@/components/actions";
 import { useApiMutation } from "@/hooks/use-api-mutations";
 import { api } from "@/convex/_generated/api";
 import { toast } from "sonner";

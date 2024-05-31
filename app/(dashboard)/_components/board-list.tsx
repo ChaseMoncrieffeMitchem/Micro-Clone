@@ -17,7 +17,7 @@ interface BoardListProps {
   };
 }
 
-const BoardList = ({ orgId, query }: BoardListProps) => {
+export const BoardList = ({ orgId, query }: BoardListProps) => {
   const data = useQuery(api.boards.get, { orgId, ...query });
 
   if (data === undefined) {
@@ -73,5 +73,3 @@ const BoardList = ({ orgId, query }: BoardListProps) => {
     </div>
   );
 };
-
-export default BoardList;
