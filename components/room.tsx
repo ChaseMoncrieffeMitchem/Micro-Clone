@@ -17,7 +17,7 @@ interface RoomProps {
 export const Room = ({ children, roomId, fallback }: RoomProps) => {
   return (
     <RoomProvider
-      initialPresence={{ cursor: null, selection: [] }}
+      initialPresence={{ cursor: null, selection: [], pencilDraft: null, penColor: null }}
       id={roomId}
       initialStorage={{
         layers: new LiveMap<string, LiveObject<Layer>>(),
